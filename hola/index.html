@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<meta charset="utf-8" />
+<head>
+<title>Envio de Datos</title>
+<script src="app.js" ></script>
+<style>
+input.aa{
+border:1px;
+border-color: black;
+color: grey;
+width: 200px;
+height: 40px;
+
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+</head>
+<body>
+  <form>
+<input class="aa" type ="text" id="inputNombre" placeholder="nombre"/>
+<input class="aa" type ="text" id="inputCorreo" placeholder="correo"/>
+<input class="aa" type ="password" id="inputPass" placeholder="contraseña"/>
+<input class="aa" type ="button" id="registrar" value ="Ingresar"/>
+</form>
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAZ8UaB-qApPhvlq0q6tC_oz_P5w1F2Aws",
+    authDomain: "comunidadgobierno-ufps.firebaseapp.com",
+    databaseURL: "https://comunidadgobierno-ufps.firebaseio.com",
+    projectId: "comunidadgobierno-ufps",
+    storageBucket: "comunidadgobierno-ufps.appspot.com",
+    messagingSenderId: "979535039632"
+  };
+  firebase.initializeApp(config);
+</script>
+</body>
+</html>

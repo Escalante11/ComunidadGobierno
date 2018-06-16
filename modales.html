@@ -1,0 +1,100 @@
+<div class="modal fade" id="ModalRegistrarProyecto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Proyecto :</h5>
+        
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre de proyecto :</label>
+            <input type="text" name="NombreProyecto" class="form-control" >
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Estado :</label>
+            <select name="estado"  class="form-control">
+                <option value="inicio" >Inicio</option>
+                <option value="proceso" >proceso</option>
+                <option value="fallido" >Fallido</option>
+                <option value="terminado" >Terminado</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Elementos :</label>
+                <input type="text" name="elemnto" class="form-control" >
+              </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title" id="exampleModalLabel">Registro</h4>
+        </div>
+        <div class="modal-body">
+          <form action="registroProyecto.php" method="POST">
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">Nombre de Interventor:</label>
+              <input type="text" name="" class="form-control">
+            </div>
+              <div class="form-group">
+              <label for="recipient-name" class="control-label">Estado:</label>
+              
+            </div>
+            
+            <hr>
+        </div>
+          </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Registrarse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- ************************** SALIR ****************************-->
+ <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>-->
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body"> ¿ Esta seguro que desea salir ?</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="index.php">Salir</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- ************************** SALIR ****************************-->
+
+
+
+<script>
+$('#ModalRegistrarProyecto').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('')
+    modal.find('.modal-body input').val(recipient)
+  })
+</script>
